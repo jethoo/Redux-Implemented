@@ -1,12 +1,11 @@
-
-
-const FilterReducer = (state = [], action ) => {
+const FilterReducer = (state = '', action ) => {
+   
    switch(action.type){
-       case 'SEARCH':
-           let userEntered = action.filter
-           console.log('userEntered', userEntered)
-           let filteredObjects = 
-           return state
+         case 'TYPED': {
+            //console.log('userEntered', action.filter)
+            //let userEntered = action.filter
+            return action.filter
+         }
         default:
             return state
    }
@@ -14,7 +13,7 @@ const FilterReducer = (state = [], action ) => {
 
 export const filterChange = filter => {
     return {
-        type: 'SEARCH',
+        type: 'TYPED',
         filter
     }
 }

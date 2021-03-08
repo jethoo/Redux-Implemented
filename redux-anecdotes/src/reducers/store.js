@@ -1,3 +1,4 @@
+
 const anecdotesAtStart = [
   'If it hurts, do it more often',
   'Adding manpower to a late software project makes it later!',
@@ -19,7 +20,9 @@ const asObject = (anecdote) => {
 
 const initialState = anecdotesAtStart.map(asObject)
 
-const reducer = (state = initialState, action) => {
+//notificationreducer import  
+
+const store = (state = initialState, action) => {
   console.log('state now: ', state)
   console.log('action', action)
   switch(action.type){
@@ -64,4 +67,4 @@ export const createAnecdote = (content) => {
   }
 }
 
-export default reducer
+export default store

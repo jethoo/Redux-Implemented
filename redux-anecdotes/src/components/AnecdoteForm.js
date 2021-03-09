@@ -1,12 +1,12 @@
 import React from 'react'
 import { useDispatch } from "react-redux";
-import { createAnecdote } from "../reducers/store";
+import { createAnecdote } from "../reducers/AnecdoteReducer";
 import { created } from "../reducers/NotificationReducer";
 
 const AnecdoteForm = (props) => {
     const dispatch = useDispatch()
 
-    const addDote = (event) => {
+    const addDote = async (event) => {
         event.preventDefault()
         const content = event.target.anecdote.value
         event.target.anecdote.value = ''

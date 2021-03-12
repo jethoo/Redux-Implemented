@@ -17,7 +17,6 @@ const AnecdoteList = (props) => {
         dispatch(addVote(id))
         dispatch(voted(id))
      }
-     
      //sorted anecdotes by votes
     let sortedAnecdote = anecdotes.sort((a,b) => {
         return (

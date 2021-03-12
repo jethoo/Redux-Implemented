@@ -6,7 +6,7 @@ const Notification = (props) => {
 
   const notification = props.message
   
-    const style = {
+   const style = {
     border: 'solid',
     padding: 10,
     borderWidth: 1
@@ -21,7 +21,6 @@ const Notification = (props) => {
 }
 
 const mapStateToProps = (state) => {
-  console.log('state', state)
    if(state.notification.status === ""){
      return {
        message: ""

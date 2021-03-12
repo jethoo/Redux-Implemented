@@ -4,16 +4,15 @@ const initialState = {
 }
 
 const NotificationReducer = (state = initialState, action) => {
+    let newState = ""
+    
     switch(action.type){
-    
         case 'VOTED': 
-          const newState = { status: 'VOTED', value: action.data.id }
-          return newState
-        
+           newState = { status: 'VOTED', value: action.data.id }
+           return newState
         case 'NEW':
-          const anotherState = { status: 'NEW', value: action.data.content }
-          return anotherState
-    
+            newState = { status: 'NEW', value: action.data.content }
+            return newState
         default:
           return state
       }   
